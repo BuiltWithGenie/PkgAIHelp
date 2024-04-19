@@ -3,8 +3,18 @@ using GenieFramework, AIHelpMe
 include("components.jl")
 @genietools
 Stipple.Layout.add_script("https://cdn.tailwindcss.com")
+Stipple.Layout.add_script("https://md-block.verou.me/md-block.js")
 
 @app begin
+    # layout and page management
+    @in left_drawer_open = true
+    @in selected_page = "chat"
+    @in ministate = true
+    # configuration
+    @in openai_key = ""
+    @in model = "gpt4"
+    @out model_options = ["gpt4", "gpt3"]
+    # chat
     @out history = []
     @in question = "Enter a question"
     @out answer = "```a=3+3```\n"
@@ -12,7 +22,7 @@ Stipple.Layout.add_script("https://cdn.tailwindcss.com")
     @onbutton submit begin
         @show "submitting question"
         @show submit, question
-        answer = aihelp(question, model_chat="gpt4").content
+        answer = aihelp(question, model_chat=model).content
         @show answer
         history = vcat(history, (question, answer))
         @show history
@@ -24,7 +34,8 @@ end
 
 ui() = [
         textfield("question",:question),
-        btn("Submit", @click(:submit)),
+        cell(class="flex",[
+        btn("Submit", @click(:submit), disable="submit"),    spinner("hourglass", color = "primary", size = "20px", @iif(:submit))]),
         chatBubble(:answer),
         h6("History"),
         Html.div(class="mt-10", @recur("pair in history"), 
@@ -35,6 +46,6 @@ ui() = [
         script(type="module", src="https://md-block.verou.me/md-block.js")
         ]
 
-        @page("/", ui)
+        @page("/", "ui.jl")
         up()
     end
