@@ -1,4 +1,4 @@
-using  Highlights, JuliaFormatter
+using Highlights, JuliaFormatter
 
 function highlight_code(code)
     code = format_text(code)
@@ -11,8 +11,8 @@ function highlight_markdown_code_blocks(markdown::String)
     code_block_regex = r"```[\s\S]*?```"
 
     replacer(m::SubString{String}) = begin
-        firstbreak = findfirst("\n", m)[1] 
-        code = String(strip(m[4:end-3]))
+        firstbreak = findfirst("\n", m)[1]
+        code = String(strip(m[4:(end - 3)]))
         @show code
         highlighted_code = highlight_code(code)
         @show highlighted_code
@@ -23,4 +23,3 @@ function highlight_markdown_code_blocks(markdown::String)
 
     return highlighted_markdown
 end
-

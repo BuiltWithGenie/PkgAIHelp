@@ -1,1 +1,4 @@
 /Manifest.toml
+log/**
+**/.DS_Store
+.vscode/**
