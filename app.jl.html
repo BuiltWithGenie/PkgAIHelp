@@ -1,0 +1,51 @@
+<div class="row" style="height: 100%; display: flex; flex-wrap: wrap;"> <!-- Ensure the row takes full height and uses flexbox -->
+
+		<div class="st-col col-12 col-sm st-module" style="height: 100%; overflow-y: auto;"> <!-- Full height and scroll for first column -->
+
+		<div style="overflow-y:scroll;max-height:800px" id="scrollingDiv" v-if="history!=[]">
+			<h6 id="il2av">History</h6>
+			<div id="ikoo5" v-for="pair in history" class="mt-10">
+				<q-card id="iibwq" class="p-4 mt-2">
+					<h6>You asked</h6>
+					<markdowntext :text="pair[0]"></markdowntext>
+				</q-card>
+				<q-card id="i2qki" class="p-4 mt-2">
+					<h6>Answer</h6>
+					<markdowntext :text="pair[1]"></markdowntext>
+				</q-card>
+			</div>
+		</div>
+		<q-input id="iy5x" label="Enter question" v-model="question"></q-input>
+		<q-btn id="iklm9" color="primary" icon="message" label="Submit" :loading="submit"
+			v-on:click="submit = true; "></q-btn>
+	</div>
+	<div id="i1lal" class="st-col st-module col-2" style="max-height:800px;overlow-y:scroll">
+<div>
+<h6> Previous chats </h6>
+<q-list bordered="" separator="" style="max-height:200px;overflow-y:scroll;margin-bottom:15px">
+    <q-item clickable="" v-for="(chat, index) in chat_list" :key="index" style="min-height:30px;height:10px">
+        <q-item-section v-on:click="chat_index = index" style="overflow:hidden">
+            {{ chat[0][0] }}
+                        <q-tooltip>{{ chat[0][0] }}</q-tooltip>
+        </q-item-section>
+                <q-item-section side >
+            <q-icon style="opacity:0.2;" name="close" class="cursor-pointer" v-on:click="delete_index = index"/>
+        </q-item-section>
+    </q-item>
+</q-list>
+		<q-btn id="iso13" color="primary" icon="add" label="New chat" v-on:click="new_chat = true" dense style="margin-left:auto;margin-right:auto;width:110px"></q-btn>
+		<q-btn id="iso13" color="primary" icon="restore" label="Reset chat" v-on:click="reset_chat = true" dense style="margin-left:auto;margin-right:auto"></q-btn>
+<br>
+		<h6>Settings</h6>
+		<q-select id="ia0jr" v-model="model" label="Model" :options="model_options"></q-select>
+		<q-select id="i6vp3" label="Packages" :options="packages" v-model="index_in_use"></q-select>
+		<q-input id="irrxt" v-model="openai_key" :dense="true" label="OpenAI key" type="password"></q-input>
+		<q-btn id="iov4z" color="primary" icon="inventory" label="Build index" v-on:click="build_index = true"
+			:loading="build_index" :dense="true" style="margin-left:auto;margin-right:auto"></q-btn>
+		<p></p>
+		<h6 id="iepi7">Stats</h6>
+		<p>Tokens:&nbsp; {{tokens}}</p>
+		<p>Cost: {{cost}}&nbsp;</p>
+	</div>
+</div>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
