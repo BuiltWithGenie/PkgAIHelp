@@ -1,5 +1,38 @@
 # AIHelpUI
 
-UI for the [AIHelpMe.jl](https://github.com/svilupp/AIHelpMe.jl) package by Jan Siml. Built with Genie.
+This app implements a web UI for the package [AIHelpMe.jl](https://github.com/svilupp/AIHelpMe.jl). This package lets you index the documentation from loaded Julia packages and ask questions about them using GPT
 
-[![Build Status](https://github.com/PGimenez/AIHelpUI.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/PGimenez/AIHelpUI.jl/actions/workflows/CI.yml?query=branch%3Amain)
+** REQUIRES AN OPENAI API KEY**
+The input box in the app is not working yet, the key must be exported before running the app as
+
+```bash
+export OPENAI_API_KEY = <key-goes-here>
+```
+
+## Installation
+
+Clone the repository and install the dependencies:
+
+First `cd` into the project directory then run:
+
+```bash
+$> julia --project -e 'using Pkg; Pkg.instantiate()'
+```
+
+Then run the app
+
+```bash
+$> export OPENAI_API_KEY = <key-goes-here>
+$> julia --project
+```
+
+```julia
+julia> using GenieFramework
+julia> Genie.loadapp() # load app
+julia> up() # start server
+```
+
+## Usage
+
+Open your browser and navigate to `http://localhost:8000/`
+

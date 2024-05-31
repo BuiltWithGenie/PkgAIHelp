@@ -1,3 +1,5 @@
+version = "0.0.1"
+
 [deps]
 AIHelpMe = "01402e1f-dc83-4213-a98b-42887d758baa"
 GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
