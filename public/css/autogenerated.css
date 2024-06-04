@@ -1,124 +1,134 @@
 footer {
-    position: absolute;
-    bottom: 0px;
-    margin-bottom: 0px !important;
-    width: 100%;
-  }
-  
-  body > .container:first-child {
-    height: calc(100vh - 90px);
-    margin-bottom: 0px;
-  }
-  
-  .stipple-core .container > .row {
-    height: 100%;
-    padding: 10px !important;
-  }
-  
-  body > .container > .row > .col-12 {
-    height: 100%;
-  }
-  
-  .q-card {
-    background-color: #ffffff10;
-  }
-  
-  #Main_ReactiveModel {
-    height: calc(100% - 0px);
-    margin-bottom: 0px;
-  }
-  
-  /* Row, container of our view's 2 columns */
-  #i3ol {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    padding: 0px;
-  }
-  
-  /* Right column */
-  #io73 {
-    overflow-y: visible;
-    height: 100%;
-    padding: 20px;
-  }
-  /* Left column */
-  #i1lal {
-    text-align: center;
-    height: 100%;
-    overflow: auto;
-    padding: 20px;
-  }
-  
-  #i1lal button {
-    margin: 3px 0px;
-    min-width: 100%;
-  }
-  
-  #il2av {
-    margin-top: 34px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-  }
-  #iepi7 {
-    margin-top: 11px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-  }
-  
-  #scrollingDiv {
-    overflow-y: auto;
-    max-height: unset;
-    height: calc(100% - 100px);
-  }
-  
-  /* end of edited by Dani */
-  #iov4z {
-    margin-top: 21px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-  }
-  #iy5x {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 16px;
-    margin-left: 0px;
-  }
-  #iso13 {
-    margin-top: 10px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    width: 110px;
-  }
-  #iklm9 {
-    margin-top: 10px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-  }
-  
-  #iauzo {
-    max-height: 200px;
-    overflow-y: scroll;
-    margin-bottom: 15px;
-  }
-  #i14lc {
-    min-height: 30px;
-    height: 10px;
-  }
-  #izipf {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  #ihaoh {
-    opacity: 0.2;
-  }
-  #iso13-2 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px !important;
+  width: 100%;
+}
+
+body>.container:first-child {
+  height: calc(100vh - 90px);
+  margin-bottom: 0px;
+}
+
+.stipple-core .container>.row {
+  height: 100%;
+  padding: 10px !important;
+}
+
+body>.container>.row>.col-12 {
+  height: 100%;
+}
+
+.q-card {
+  background-color: #ffffff10;
+}
+
+#Main_ReactiveModel {
+  height: calc(100% - 0px);
+  margin-bottom: 0px;
+}
+
+/* Row, container of our view's 2 columns */
+#i3ol {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0px;
+}
+
+/* Right column */
+#io73 {
+  overflow-y: visible;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Left column */
+#i1lal {
+  text-align: center;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+
+#i1lal button {
+  margin: 3px 0px;
+  min-width: 100%;
+}
+
+#il2av {
+  margin-top: 34px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#iepi7 {
+  margin-top: 11px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#scrollingDiv {
+  overflow-y: auto;
+  max-height: unset;
+  height: calc(100% - 100px);
+}
+
+/* end of edited by Dani */
+#iov4z {
+  margin-top: 21px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+#iy5x {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 16px;
+  margin-left: 0px;
+}
+
+#iso13 {
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  width: 110px;
+}
+
+#iklm9 {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#iauzo {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+
+#i14lc {
+  min-height: 30px;
+  height: 10px;
+}
+
+#izipf {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: block;
+  height: 20px;
+}
+
+#ihaoh {
+  opacity: 0.2;
+}
+
+#iso13-2 {
+  margin-left: auto;
+  margin-right: auto;
+}

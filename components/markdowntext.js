@@ -1,9 +1,11 @@
 Vue.component("markdowntext", {
     template: `
         <div style="position: relative;">
-            <md-block :key="contentKey">{{ text }}</md-block>
+            <div style="padding-right:30px">
+                <md-block :key="contentKey">{{ text }}</md-block>
+            </div>
             <button style="position: absolute; top: 0; right: 0; background: none; border: none; cursor: pointer;" @click="copyToClipboard(text)">
-                <q-icon name="content_copy" />
+                <q-icon name="content_copy" color="white" />
             </button>
         </div>
     `,
