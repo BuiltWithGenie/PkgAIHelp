@@ -2,12 +2,11 @@
 
 This app implements a web UI for the package [AIHelpMe.jl](https://github.com/svilupp/AIHelpMe.jl). This package lets you index the documentation from loaded Julia packages and ask questions about them using GPT
 
-** REQUIRES AN OPENAI API KEY**
-The input box in the app is not working yet, the key must be exported before running the app as
 
-```bash
-export OPENAI_API_KEY = <key-goes-here>
-```
+
+https://github.com/BuiltWithGenie/PkgAIHelp/assets/5058397/e7986c20-3d63-410c-a162-80f33302f5f5
+
+**REQUIRES AN OPENAI API KEY**. Enter your key in the API KEY text field before entering a question.
 
 ## Installation
 
@@ -22,7 +21,6 @@ $> julia --project -e 'using Pkg; Pkg.instantiate()'
 Then run the app
 
 ```bash
-$> export OPENAI_API_KEY = <key-goes-here>
 $> julia --project
 ```
 
