@@ -1,3 +1,5 @@
+name = "PkgAIHelp"
+imgname = "aihelp"
 version = "0.0.1"
 
 [deps]
